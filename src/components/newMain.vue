@@ -4,7 +4,7 @@
         <li v-for="(film,index) in displayMyFilms" :key="index">
         <p>{{film.original_title}}</p>
         <p>{{film.title}}</p>
-        <p>{{film.original_language}}</p>
+        <img :src="film.original_language"/>
         <p>{{film.vote_average}}</p>
     </li>
     </ul>
