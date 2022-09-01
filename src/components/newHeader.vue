@@ -1,7 +1,7 @@
 <template>
 <div class="myHeadContainer">
     <input v-model="filmSearch" id="filmSearch" type="text">
-    <button @click="$emit('search', myFunction )" class="mySrcBtn">Search</button>
+    <button @click="$emit('search', filmSearch )" class="mySrcBtn">Search</button>
 </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 
     data (){
         return {
-            filmSearch : 'base'
+            filmSearch : ''
         }
     }
 
