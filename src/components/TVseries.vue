@@ -2,7 +2,8 @@
   <div class="TVseries">
       TV SERIES
       <ul>
-          <li v-for="(TVserie, index) in displayMySeries" :key="index">
+        <li v-for="(TVserie, index) in displayMySeries" :key="index">
+        <img :src="'https://image.tmdb.org/t/p/w500/'+TVserie.backdrop_path" alt="">
         <p>{{TVserie.original_title}}</p>
         <p>{{TVserie.title}}</p>
         <img class="myFlag" :src="TVserie.original_language"/>
