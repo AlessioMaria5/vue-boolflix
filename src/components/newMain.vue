@@ -1,12 +1,18 @@
 <template>
 <div class="myMain">
-    <p>This is my Main</p>
+    <ul>
+        <li v-for="(film,index) in displayMyFilms" :key="index">
+        {{film.original_title}}</li>
+    </ul>
 </div>
 </template>
 
 <script>
 export default {
-    name: 'NewMain'
+    name: 'NewMain',
+    props: {
+        displayMyFilms:Array
+    } 
 }
 </script>
 
