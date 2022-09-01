@@ -1,10 +1,12 @@
 <template>
 <div class="myMain">
+    <h1>FILMs</h1>
     <ul>
         <li v-for="(film,index) in displayMyFilms" :key="index">
         <p>{{film.original_title}}</p>
         <p>{{film.title}}</p>
         <img :src="film.original_language"/>
+        <p>{{film.original_language==false?'displayOff':''}}</p>
         <p>{{film.vote_average}}</p>
     </li>
     </ul>
@@ -26,5 +28,9 @@ export default {
     
     color: black;
     text-align: center;
+}
+
+.displayOff {
+    display: none;
 }
 </style>
