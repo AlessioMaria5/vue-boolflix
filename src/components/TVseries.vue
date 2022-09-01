@@ -3,7 +3,12 @@
       TV SERIES
       <ul>
           <li v-for="(TVserie, index) in displayMySeries" :key="index">
-        {{TVserie.original_title}}</li>
+        <p>{{TVserie.original_title}}</p>
+        <p>{{TVserie.title}}</p>
+        <img class="myFlag" :src="TVserie.original_language"/>
+        <p>{{TVserie.original_language==false?'displayOff':''}}</p>
+        <p>{{TVserie.vote_average}}</p>
+    </li>
        
       </ul>
   </div>
@@ -18,6 +23,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+.myFlag {
+    width: 25px;
+    
+}
 
 </style>

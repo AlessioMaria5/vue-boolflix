@@ -5,7 +5,7 @@
         <li v-for="(film,index) in displayMyFilms" :key="index">
         <p>{{film.original_title}}</p>
         <p>{{film.title}}</p>
-        <img :src="film.original_language"/>
+        <img class="myFlag" :src="film.original_language"/>
         <p>{{film.original_language==false?'displayOff':''}}</p>
         <p>{{film.vote_average}}</p>
     </li>
@@ -32,5 +32,10 @@ export default {
 
 .displayOff {
     display: none;
+}
+
+.myFlag {
+    width: 25px;
+    
 }
 </style>
