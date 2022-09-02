@@ -13,6 +13,7 @@ import axios from 'axios';
 import TVseries from "./components/TVseries.vue";
 
 export default {
+
   name: 'App',
   components: {
     NewHeader,
@@ -57,17 +58,8 @@ export default {
 
           for( let x = 0 ; x < newScore ; x++){
             res.data.results[i].vote_average += '★'
-          }
-  
-        
-        
-      }
-       
-      
-      
-      
-
-      
+          } 
+      } 
 
     })
     
@@ -89,15 +81,14 @@ export default {
         }
 
         else {
-          res.data.results[i].original_language = false
+          res.data.results[i].original_language = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KK-Q2mcxD1oB5e3SPK-Sa0_eqpXkUaFe7t2gEuvYqA&s"
         }
 
         let newScore = Math.floor(res.data.results[i].vote_average / 2)
         res.data.results[i].vote_average = newScore
         res.data.results[i].vote_average = ''
-        
-        for( let x = 0 ; x < newScore ; x++){
 
+        for( let x = 0 ; x < newScore ; x++){
             res.data.results[i].vote_average += '★'
           }
       }
