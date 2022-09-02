@@ -25,6 +25,17 @@ export default {
 
 <style lang="scss">
 
+ul {
+            display:flex;
+            background-color: black;
+            overflow: auto;
+            color:white;
+            text-align: center;
+            li{
+                
+            }
+        }
+
 .myFlag {
     width: 25px;
     

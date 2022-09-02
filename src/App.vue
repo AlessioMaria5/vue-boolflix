@@ -53,30 +53,12 @@ export default {
         
         let newScore = Math.floor(res.data.results[i].vote_average / 2)
         res.data.results[i].vote_average = newScore
+        res.data.results[i].vote_average = ''
 
-          if(res.data.results[i].vote_average == 5){
-            res.data.results[i].vote_average = "#####"
+          for( let x = 0 ; x < newScore ; x++){
+            res.data.results[i].vote_average += '★'
           }
-        
-          if(res.data.results[i].vote_average == 4){
-              res.data.results[i].vote_average = "####"
-          }
-
-          if(res.data.results[i].vote_average == 3){
-            res.data.results[i].vote_average = "###"
-          }
-
-          if(res.data.results[i].vote_average == 2){
-            res.data.results[i].vote_average = "##"
-          }
-
-          if(res.data.results[i].vote_average == 1){
-            res.data.results[i].vote_average = "#"
-          }
-         
-          if(res.data.results[i].vote_average == 0){
-            res.data.results[i].vote_average = "No Vote"
-          }
+  
         
         
       }
@@ -112,29 +94,11 @@ export default {
 
         let newScore = Math.floor(res.data.results[i].vote_average / 2)
         res.data.results[i].vote_average = newScore
-
-          if(res.data.results[i].vote_average == 5){
-            res.data.results[i].vote_average = "#####"
-          }
+        res.data.results[i].vote_average = ''
         
-          if(res.data.results[i].vote_average == 4){
-              res.data.results[i].vote_average = "####"
-          }
+        for( let x = 0 ; x < newScore ; x++){
 
-          if(res.data.results[i].vote_average == 3){
-            res.data.results[i].vote_average = "###"
-          }
-
-          if(res.data.results[i].vote_average == 2){
-            res.data.results[i].vote_average = "##"
-          }
-
-          if(res.data.results[i].vote_average == 1){
-            res.data.results[i].vote_average = "#"
-          }
-         
-          if(res.data.results[i].vote_average == 0){
-            res.data.results[i].vote_average = "No Vote"
+            res.data.results[i].vote_average += '★'
           }
       }
     })
